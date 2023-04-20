@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dashboard</title>
+
+
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            thead {
+                padding: 5px 10px;
+                text-align: center;
+                background-color: lightgray;
+            }
+            td {
+                padding: 5px 10px;
+                text-align: center;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <img src="/static/images/google.png">
+        <h1>Application Data</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>날자</td>
+                    <td>KOR</td>
+                    <td>MATH</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    {% for key in row %}
+                    <td>{{ row[key] }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+      </table>
+
+
+    </body>
+</html>
